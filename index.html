@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ProductX — Heavy UI Landing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="siteHeader">
+    <div class="header-inner container">
+      <a class="brand" href="#" aria-label="ProductX homepage">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/></svg>
+        <span class="brand-name">ProductX</span>
+      </a>
+
+      <div class="header-actions">
+        <div class="search-wrap" role="search">
+          <input id="searchInput" class="search" type="search" placeholder="Search features..." aria-label="Search">
+          <button class="icon-btn" id="searchBtn" aria-label="Open search">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M21 21l-4.35-4.35"/><circle cx="11" cy="11" r="6" /></svg>
+          </button>
+        </div>
+
+        <nav class="nav" id="primaryNav" aria-label="Primary">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#features">Features</a></li>
+            <li class="nav-item has-mega">
+              <button class="mega-toggle" aria-expanded="false">Products ▾</button>
+              <div class="mega" aria-hidden="true">
+                <div class="mega-grid">
+                  <div class="mega-card">
+                    <h4>Analytics</h4>
+                    <p>Realtime dashboards & custom reports</p>
+                  </div>
+                  <div class="mega-card">
+                    <h4>Integrations</h4>
+                    <p>Connect with 100+ tools and APIs</p>
+                  </div>
+                  <div class="mega-card">
+                    <h4>Security</h4>
+                    <p>Enterprise-grade controls & SSO</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-cta">
+          <button class="btn ghost" id="themeToggle" aria-pressed="false" title="Toggle theme">🌙</button>
+          <a class="btn primary" href="#get-started">Get Started</a>
+          <button class="nav-toggle" id="mobileToggle" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li>
+          <button class="mobile-accordion">Products ▾</button>
+          <ul class="sub">
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="btn primary block" href="#get-started">Get Started</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-grid container">
+        <div class="hero-content">
+          <h1>Powerful product suite for modern teams</h1>
+          <p class="lede">Ship faster with integrated tools — analytics, integrations, security, and collaboration built to scale. Choose plans, compare features, or start a trial.</p>
+
+          <div class="hero-cta">
+            <a href="#get-started" class="btn primary large">Start free trial</a>
+            <a href="#tour" class="btn ghost">Product tour</a>
+          </div>
+
+          <div class="meta">
+            <span class="pill">14-day trial • No credit card</span>
+            <span class="muted">Trusted by 3,400+ companies</span>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-card">
+            <div class="panel-header">
+              <div>
+                <strong>Monthly Active</strong>
+                <div class="big">1.2M</div>
+                <span class="muted">Users tracked</span>
+              </div>
+              <div class="spark">
+                <svg viewBox="0 0 24 24"><path d="M3 12h18" /></svg>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="stats">
+                <div class="stat">
+                  <small>Conversion</small>
+                  <strong>6.1%</strong>
+                </div>
+                <div class="stat">
+                  <small>Retention</small>
+                  <strong>82%</strong>
+                </div>
+                <div class="stat">
+                  <small>Latency</small>
+                  <strong>48ms</strong>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="bar" style="width: 62%"></div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <a class="link" href="#analytics">View analytics →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Options area: Pricing toggle, cards, filters -->
+    <section class="options container" id="pricing">
+      <header class="options-head">
+        <h2>Flexible pricing & plans</h2>
+        <div class="toggle-wrap" aria-hidden="false">
+          <span class="muted">Monthly</span>
+          <button id="billingToggle" class="switch" aria-pressed="false"><span class="knob"></span></button>
+          <span class="muted">Yearly <span class="accent">-20%</span></span>
+        </div>
+      </header>
+
+      <div class="plans-grid">
+        <div class="plan card">
+          <div class="plan-head">
+            <h3>Starter</h3>
+            <p class="muted">Essential features</p>
+            <div class="price"><span class="currency">$</span><span class="amount" data-monthly="19" data-yearly="15">19</span><small>/mo</small></div>
+          </div>
+          <ul class="plan-features">
+            <li>Up to 5 projects</li>
+            <li>Basic analytics</li>
+            <li>Email support</li>
+          </ul>
+          <div class="plan-cta">
+            <a class="btn ghost" href="#get-started">Choose</a>
+          </div>
+        </div>
+
+        <div class="plan card featured">
+          <div class="ribbon">Most popular</div>
+          <div class="plan-head">
+            <h3>Pro</h3>
+            <p class="muted">For growing teams</p>
+            <div class="price"><span class="currency">$</span><span class="amount" data-monthly="49" data-yearly="39">49</span><small>/mo</small></div>
+          </div>
+          <ul class="plan-features">
+            <li>Unlimited projects</li>
+            <li>Advanced analytics</li>
+            <li>Priority support</li>
+          </ul>
+          <div class="plan-cta">
+            <a class="btn primary" href="#get-started">Get Pro</a>
+          </div>
+        </div>
+
+        <div class="plan card">
+          <div class="plan-head">
+            <h3>Enterprise</h3>
+            <p class="muted">Custom & SSO</p>
+            <div class="price"><span class="currency">Contact</span></div>
+          </div>
+          <ul class="plan-features">
+            <li>Dedicated success</li>
+            <li>SSO & audits</li>
+            <li>Custom SLAs</li>
+          </ul>
+          <div class="plan-cta">
+            <a class="btn ghost" href="#contact">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features container">
+      <h2>What you get</h2>
+      <div class="features-grid">
+        <article class="feature card">
+          <svg class="feature-ic" viewBox="0 0 24 24"><path d="M3 12h18"/></svg>
+          <h3>Realtime analytics</h3>
+          <p class="muted">Track behavior and funnels with minimal setup.</p>
+        </article>
+        <article class="feature card">
+          <svg class="feature-ic" viewBox="0 0 24 24"><path d="M3 12h18"/></svg>
+          <h3>Extensive integrations</h3>
+          <p class="muted">Connect to Slack, HubSpot, Salesforce and more.</p>
+        </article>
+        <article class="feature card">
+          <svg class="feature-ic" viewBox="0 0 24 24"><path d="M3 12h18"/></svg>
+          <h3>Enterprise ready</h3>
+          <p class="muted">SAML/SSO, audit logs, and compliance options.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials carousel -->
+    <section id="testimonials" class="testimonials container">
+      <h2>Customers love ProductX</h2>
+      <div class="carousel" data-interval="5000" id="carousel">
+        <button class="carousel-prev" aria-label="Previous">‹</button>
+        <ul class="carousel-track">
+          <li class="slide active">
+            <blockquote>"ProductX helped us halve deployment time and double conversion."</blockquote>
+            <cite>— Alex M, CTO</cite>
+          </li>
+          <li class="slide">
+            <blockquote>"Integrations were seamless and the dashboards are gorgeous."</blockquote>
+            <cite>— Priya S, Head of Growth</cite>
+          </li>
+          <li class="slide">
+            <blockquote>"Top-notch support and reliability for our enterprise needs."</blockquote>
+            <cite>— Michael R, Ops</cite>
+          </li>
+        </ul>
+        <button class="carousel-next" aria-label="Next">›</button>
+      </div>
+    </section>
+
+    <!-- CTA + Modal signup -->
+    <section class="cta container" id="get-started">
+      <div class="cta-card card">
+        <h2>Ready to try ProductX?</h2>
+        <p class="muted">Start your 14-day free trial, or schedule a demo with our team.</p>
+        <div class="cta-actions">
+          <button class="btn primary" id="openSignup">Start free trial</button>
+          <a class="btn ghost" href="#contact">Schedule demo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>ProductX</strong>
+        <p class="muted">Powering performant teams since 2016.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#status">Status</a>
+      </div>
+      <div class="socials">
+        <a aria-label="Twitter" href="#" class="social">T</a>
+        <a aria-label="GitHub" href="#" class="social">G</a>
+        <a aria-label="LinkedIn" href="#" class="social">in</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Signup modal -->
+  <div class="modal-backdrop" id="modal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="signupTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close">✕</button>
+      <h3 id="signupTitle">Create your ProductX account</h3>
+      <form id="signupForm" class="form">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" required placeholder="Jane Doe">
+        </div>
+        <div class="form-row">
+          <label for="email">Work email</label>
+          <input id="email" type="email" required placeholder="you@company.com">
+        </div>
+        <div class="form-row">
+          <label for="company">Company</label>
+          <input id="company" placeholder="Company, inc">
+        </div>
+        <div class="form-row actions">
+          <button class="btn primary" type="submit">Start free trial</button>
+          <button class="btn ghost" type="button" id="cancelModal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
